@@ -1,0 +1,107 @@
+nav {
+  position: absolute;
+  width: 100%;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 10;
+}
+.main-nav {
+  list-style: none;
+  display: flex;
+  justify-content: space-around;
+  padding: 4rem 0;
+  li {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  a {
+    text-decoration: none;
+    color: $white;
+    text-transform: uppercase;
+    font-size: 2rem;
+    font-weight: bold;
+    transition: color 0.3s ease-in-out;
+    &:hover {
+      color: $primary;
+    }  
+  }
+}
+.hamburger {
+  display: none;
+}
+@media (max-width: 992px) and (orientation: landscape) {
+  nav .container {
+    max-height: 20vh;
+  }
+}
+@media (max-width: 992px){
+  nav .container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 1rem;
+    background-color: transparent;
+    transition: background-color 0.7s linear;
+    &.colored {
+      background-color: $primary;
+      box-shadow: 0px 3px 5px 0px rgba(0,0,0,0.75);
+      max-height: 100vh;
+    }
+  }
+  .main-nav {
+    width: 100%;
+    margin: -20px 0 0;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    opacity: 0;
+    transform: scale(0);
+    transition: transform 0.7s ease-in-out, opacity 2s ease-in-out;
+    .brand-link {
+      order: -10;
+    }
+    &.opened {
+      transform: scale(1);
+      opacity: 1;
+    }
+    a {
+      font-size: 2rem;
+    }
+  }
+
+  .hamburger {
+    margin-top: 20px;
+    align-self: flex-end;
+    display: inline-block;
+    width: 40px;
+    height: 35px;
+    border: none;
+    border-top: 5px solid $white;
+    background-color: transparent;
+    position: relative;
+    padding: 0; 
+    transition: transform 0.3s ease-in-out;
+    &::after,
+    &::before {
+      content: ''; 
+      position: absolute;
+      width: 100%;
+      top: 0;
+      left: 0;
+      border-top: 5px solid $white;
+      transform: translateY(10px);
+    }
+    &::after { 
+      transform: translateY(25px);
+    }
+    &.close {
+      transform: rotate(45deg);
+      border: none;
+    }
+    &.close:after {
+      transform: rotate(-90deg) translateX(-10px);
+    }
+  }
+}

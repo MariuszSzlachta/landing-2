@@ -1,0 +1,68 @@
+//Variables
+$primary: #16a085;
+$primary--light: #1abc9c;
+$grey: #373737;
+$fogyWhite: #f5f6f7;
+$white: #ffffff;
+
+// global
+* {
+  box-sizing: border-box;
+}
+
+html {
+  font-size: 62.5%;
+  line-height: 2;
+}
+
+body {
+  font-family: "Open Sans", sans-serif;
+  font-size: 1rem;
+}
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 12px;
+}
+.grid-container {
+  max-width: 1200px;
+  display: grid;
+  margin: 0 auto;
+  padding: 0 12px;
+}
+section {
+  padding: 10rem 0;
+}
+.section-heading {
+  font-size: 3rem;
+  color: $primary;
+  text-transform: uppercase;
+}
+.lead {
+  font-size: 1.6rem;
+}
+.btn {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 190px;
+  height: 50px;
+  text-transform: uppercase;
+  text-decoration: none;
+  font-size: 1.6rem;
+}
+.btn-primary {
+  border-radius: 6px;
+  transition: background-color 0.7s ease-in-out;
+  background-color: $primary;
+  color: $white;
+  font-weight: bold;
+  &:hover {
+    background-color: $primary--light;
+  }
+}
+@media (max-width: 768px) {
+  section {
+    padding: 4rem 0;
+  }
+}

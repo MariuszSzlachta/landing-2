@@ -1,0 +1,51 @@
+.photo-app{
+  margin: 0 auto;
+  background: $fogyWhite url('../images/phone-in-hand.png') no-repeat;
+  background-position-x: 75%;
+  background-position-y: -30%;
+  .grid-container {
+    margin: 0 auto;
+    grid-template-columns: 1fr 1fr;
+    grid-template-areas: 
+      "heading . "
+      "lead . "
+      "button ."
+  }
+  .section-heading{
+    grid-area: heading;
+    font-size: 2rem;
+  }
+  .lead {
+    grid-area: lead;
+    text-align: left;
+    font-size: 1.4rem;
+  }
+  .btn {
+    grid-area: button;
+    justify-self: start;
+    align-self: start;
+  }
+}
+
+@media (max-width: 992px) {
+  .photo-app {
+    background-position-x: 90%;
+    background-position-y: -60%;
+  }
+}
+@media (max-width: 768px){
+  .photo-app {
+    background: $fogyWhite;
+    .grid-container {
+      grid-template-columns: 1fr;
+    }
+    .section-heading,
+    .lead {
+      align-self: center;
+      text-align: center;
+    }
+    .btn {
+      justify-self: center;
+    }
+  }
+}

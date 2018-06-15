@@ -1,0 +1,58 @@
+.download {
+  .section-heading,
+  .section-description {
+    text-align: center;
+    font-weight: bold;
+    color: $grey;
+  }
+  .section-description {
+    font-size: 1.6rem;
+    text-transform: uppercase;
+  }
+  .wrapper {
+    display: flex;
+    justify-content: center;
+    margin-top: 4rem;
+  }
+  .btn {
+    border: 0;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: 0 10px;
+    padding: 0;
+    width: 300px;
+    height: 60px;
+    border-radius: 6px;
+    .store-name {
+      background-color: $primary--light;
+      width: calc(100% - 60px);
+      height: 60px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      border-bottom-left-radius: 6px;
+      border-top-left-radius: 6px;
+    }
+    .store-icon {
+      width: 60px;
+      height: 60px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      font-size: 3rem;
+    }
+  }
+}
+
+@media (max-width: 768px){
+  .download .wrapper {
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    .btn {
+      margin-bottom: 1rem;
+    }
+  }
+
+}

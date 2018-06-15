@@ -1,0 +1,96 @@
+.design {
+  .grid-container {
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: minmax(450px, auto)
+  }
+  .card {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 2rem 0;
+  }
+  .card-heading {
+    color: $primary;
+    font-size: 2rem;
+    text-transform: uppercase;
+    margin-bottom: 0;
+  }
+  .card-lead {
+    font-size: 1.4rem;
+    text-align: center;
+    max-width: 80%;
+    margin-bottom: 2rem;
+  }
+  .main-carousel {
+    position: relative;
+    width: 100%;
+  }
+  .carousel-cell {
+    width: 100%;
+  }
+  .flickity-button {
+    position: absolute;
+    bottom: 0;
+  }
+  .flickity-prev-next-button {
+    top: 100%;
+    background: transparent;
+    &.next {
+      right: 85%;
+    }
+  }
+  .image-container {
+    // max-height: 500px;
+    max-width: 100%;
+    padding: 20px;
+    img {
+      margin: 0 auto;
+      display: block;
+      max-width: 100%;
+      height: auto;
+      max-height: 100%;
+      object-fit: cover;
+    }
+  }
+}
+
+@media (max-width: 992px) {
+  .design .flickity-prev-next-button.next {
+    right: 80%;
+  }
+}
+
+@media (max-width: 768px) {
+  .design {
+    .grid-container {
+      grid-template-columns: 1fr;
+    }
+    .image-container {
+      display: none;
+    }
+    .flickity-prev-next-button {
+      top: 90%;
+      left: 50%;
+      background: transparent;
+      &.previous {
+        transform: translateX(-100%);
+      }
+      &.next {
+        right: 0;
+        top: 95%;
+      }
+    }
+  }
+}
+
+@media (max-width: 576px) {
+  .design .flickity-prev-next-button.next {
+    right: 65%;
+  }
+}
+
+@media (max-width: 360px) {
+  .design .flickity-prev-next-button.next {
+    right: 40%;
+  }
+}

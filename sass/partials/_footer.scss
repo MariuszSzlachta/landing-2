@@ -1,0 +1,52 @@
+.footer {
+  .grid-container {
+    grid-template-columns: 1.5fr 0.5fr;
+    grid-template-areas:
+     "footer-links brand" 
+      "copy brand";
+  }
+  .footer-links {
+    grid-area: footer-links;
+    list-style: none;
+    display: flex;
+    padding: 0;
+  }
+  a {
+    font-size: 1.6rem;
+    color: $grey;
+    text-decoration: none;
+    text-transform: uppercase;
+    margin-right: 1rem;
+    padding-right: 1rem;
+    &:not(:last-child){
+      border-right: 2px solid $primary;      
+    }
+  }
+  img {
+    grid-area: brand;
+    align-self: center;
+    justify-self: center;
+  }
+  .copyrights {
+    grid-area: copy;
+    font-size: 1.6rem;
+    margin: 1rem 0;
+  }
+}
+
+@media (max-width: 576px) {
+  .footer{
+    .grid-container{
+      grid-template-columns: 1fr 1fr;
+      grid-template-areas: 
+        "footer-links footer-links"
+        "copy brand";
+    }
+    .footer-links {
+      justify-content: center;
+    }
+    .copyrights {
+      text-align: center;
+    }
+  }
+}
