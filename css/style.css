@@ -413,6 +413,7 @@ nav {
   max-height: 100%;
   -o-object-fit: cover;
      object-fit: cover;
+  width: 40%;
 }
 
 @media (max-width: 992px) {
