@@ -1,0 +1,2 @@
+It's a simple website created using flickity carousel, mustache.js. 
+Cooded by Mariusz Szlachta
