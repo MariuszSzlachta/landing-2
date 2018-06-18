@@ -63,9 +63,15 @@
 
 @media (max-width:768px){
   .site-header {
-    font-size: 4rem;
+    font-size: 6rem;
     span {
      display: block;
     }
+  }
+}
+
+@media (max-width:480px){
+  .site-header {
+    font-size: 4rem;
   }
 }

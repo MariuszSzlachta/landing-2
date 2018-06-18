@@ -60,6 +60,7 @@
   }
 }
 
+
 @media (max-width: 768px) {
   .design {
     .grid-container {
@@ -68,29 +69,18 @@
     .image-container {
       display: none;
     }
-    .flickity-prev-next-button {
-      top: 90%;
-      left: 50%;
-      background: transparent;
-      &.previous {
-        transform: translateX(-100%);
-      }
-      &.next {
-        right: 0;
-        top: 95%;
-      }
+    .flickity-prev-next-button.next {
+      right: 86%;
     }
   }
 }
-
 @media (max-width: 576px) {
   .design .flickity-prev-next-button.next {
-    right: 65%;
+    right: 79%;
   }
 }
-
 @media (max-width: 360px) {
   .design .flickity-prev-next-button.next {
-    right: 40%;
+    right: 72%;
   }
 }

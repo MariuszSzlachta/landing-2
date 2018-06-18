@@ -43,7 +43,7 @@ nav {
     align-items: center;
     padding: 1rem;
     background-color: transparent;
-    transition: background-color 0.7s linear;
+    transition: background-color 0.3s linear;
     &.colored {
       background-color: $primary;
       box-shadow: 0px 3px 5px 0px rgba(0,0,0,0.75);
@@ -57,13 +57,11 @@ nav {
     display: flex;
     flex-direction: column;
     opacity: 0;
-    transform: scale(0);
-    transition: transform 0.7s ease-in-out, opacity 2s ease-in-out;
+    transition: opacity 0.3s ease-in-out;
     .brand-link {
       order: -10;
     }
     &.opened {
-      transform: scale(1);
       opacity: 1;
     }
     a {
@@ -83,6 +81,7 @@ nav {
     position: relative;
     padding: 0; 
     transition: transform 0.3s ease-in-out;
+    cursor: pointer;
     &::after,
     &::before {
       content: ''; 
