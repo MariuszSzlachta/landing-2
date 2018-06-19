@@ -70,37 +70,47 @@ nav {
   }
 
   .hamburger {
-    margin-top: 20px;
+    display: block;
     align-self: flex-end;
-    display: inline-block;
     width: 40px;
     height: 35px;
-    border: none;
-    border-top: 5px solid $white;
+    top: 15px;
+    right: 20px;
+    font-size: 4rem;
     background-color: transparent;
-    position: relative;
-    padding: 0; 
-    transition: transform 0.3s ease-in-out;
+    outline: 0;
+    border: none;
+    border-radius: 4px;
+    padding: 0;
+    color: $white;
     cursor: pointer;
-    &::after,
-    &::before {
-      content: ''; 
-      position: absolute;
+    transition: transform 0.3s ease-in-out;
+    &:hover {
+      transform: scale(1.2);
+    }
+    .firefox-fallback {
       width: 100%;
-      top: 0;
-      left: 0;
-      border-top: 5px solid $white;
-      transform: translateY(10px);
+      height: 35px;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
     }
-    &::after { 
-      transform: translateY(25px);
+    .bar {
+      display: block;
+      width: 40px;
+      height: 5px;
+      border-radius: 1px;
+      background-color: $white;
+      transition: all 0.3s ease-in-out;
     }
-    &.close {
-      transform: rotate(45deg);
-      border: none;
+    &.close .bar:nth-child(1) {
+      transform: translateY(15px) rotate(45deg);
     }
-    &.close:after {
-      transform: rotate(-90deg) translateX(-10px);
+    &.close .bar:nth-child(2) {
+      transform: translateX(9999px);
     }
-  }
+    &.close .bar:nth-child(3) {
+      transform: translateY(-15px) rotate(-45deg);
+    }
+}
 }

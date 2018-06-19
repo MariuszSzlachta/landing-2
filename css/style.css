@@ -161,38 +161,52 @@ nav {
     font-size: 2rem;
   }
   .hamburger {
-    margin-top: 20px;
+    display: block;
     -ms-flex-item-align: end;
         align-self: flex-end;
-    display: inline-block;
     width: 40px;
     height: 35px;
-    border: none;
-    border-top: 5px solid #ffffff;
+    top: 15px;
+    right: 20px;
+    font-size: 4rem;
     background-color: transparent;
-    position: relative;
-    padding: 0;
-    transition: transform 0.3s ease-in-out;
-    cursor: pointer;
-  }
-  .hamburger::after, .hamburger::before {
-    content: '';
-    position: absolute;
-    width: 100%;
-    top: 0;
-    left: 0;
-    border-top: 5px solid #ffffff;
-    transform: translateY(10px);
-  }
-  .hamburger::after {
-    transform: translateY(25px);
-  }
-  .hamburger.close {
-    transform: rotate(45deg);
+    outline: 0;
     border: none;
+    border-radius: 4px;
+    padding: 0;
+    color: #ffffff;
+    cursor: pointer;
+    transition: transform 0.3s ease-in-out;
   }
-  .hamburger.close:after {
-    transform: rotate(-90deg) translateX(-10px);
+  .hamburger:hover {
+    transform: scale(1.2);
+  }
+  .hamburger .firefox-fallback {
+    width: 100%;
+    height: 35px;
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-direction: column;
+        flex-direction: column;
+    -ms-flex-pack: justify;
+        justify-content: space-between;
+  }
+  .hamburger .bar {
+    display: block;
+    width: 40px;
+    height: 5px;
+    border-radius: 1px;
+    background-color: #ffffff;
+    transition: all 0.3s ease-in-out;
+  }
+  .hamburger.close .bar:nth-child(1) {
+    transform: translateY(15px) rotate(45deg);
+  }
+  .hamburger.close .bar:nth-child(2) {
+    transform: translateX(9999px);
+  }
+  .hamburger.close .bar:nth-child(3) {
+    transform: translateY(-15px) rotate(-45deg);
   }
 }
 
