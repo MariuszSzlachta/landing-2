@@ -69,7 +69,14 @@
     }
   }
 }
-
+@media (max-width:768px) and (orientation: landscape){
+  .site-header {
+    font-size: 4rem;
+    span {
+     display: block;
+    }
+  }
+}
 @media (max-width:480px){
   .site-header {
     font-size: 4rem;
