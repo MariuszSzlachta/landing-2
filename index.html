@@ -20,7 +20,7 @@
   <!-- navbar -->
   <nav>
     <div class="container">
-      <button class="hamburger">
+      <button class="hamburger" aria-haspopup="true" role="button">
         <div class="firefox-fallback">
           <span class="bar"></span>
           <span class="bar"></span>
@@ -91,6 +91,7 @@
       <div class="main-carousel">
         <!-- generated template -->
       </div>
+    </div>
   </section>
 
   <section class="community">
@@ -164,7 +165,7 @@
   </footer>
 
   <script src="js/carousel-data.js"></script>
-  <script id="template" type=type="x-tmpl-mustache">
+  <script id="template" type="x-tmpl-mustache">
     <div class="carousel-cell">
       <div class="card">
         <h3 class="card-heading">{{heading}}</h3>
