@@ -1,5 +1,4 @@
-https://mariuszszlachta.github.io/project-2/
-
+https://mariuszszlachta.github.io/landing-2/
 
 # Landing-2
 
